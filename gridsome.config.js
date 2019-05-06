@@ -7,6 +7,7 @@
 module.exports = {
   siteName: `Gridsome Blog`,
   titleTemplate: `%s - Gridsome`,
+  pathPrefix: '/griid',
 
   plugins: [
     {
