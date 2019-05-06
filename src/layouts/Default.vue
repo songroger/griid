@@ -25,7 +25,25 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+::selection {
+  background: var(--color1);
+  color: #fff;
+  text-shadow: none;
+}
+
+:root {
+  --color-text: #444;
+  --color-border: #eee;
+  --color1: #1565C0;
+  --color2: #999;
+  --title-font: Georgia,"Microsoft YaHei",sans-serif;
+
+  --color-desc: #f9f8e9;
+  --particle-len: 50px;
+  --particle-color: #FC3C3C;
+}
+
 body {
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   margin:0;
@@ -35,7 +53,21 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--color2);
+  &:hover {
+      color: var(--color-text);
+      border-color: var(--color2);
+      transition: all .5s ease-in;
+    }
 }
+
+time {
+  color: var(--color2);
+  font-size: 15px;
+  font-family: "Segoe UI",Optima,"Helvetica Neue",sans-serif;
+  text-transform: uppercase;
+}
+
 
 .layout {
   max-width: 760px;

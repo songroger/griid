@@ -12,7 +12,7 @@ query {
   }
 }
 </static-query>
-<style>
+<style lang="scss">
 .footer {
   padding: 1.6rem 0;
   box-shadow: inset 0 1px 0 var(--color-border);
