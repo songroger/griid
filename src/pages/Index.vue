@@ -13,7 +13,7 @@
     <span class="article__align-right">
         <a href="/archive">more</a>
     </span>
-    <Pager :info="$page.allBlogPost.pageInfo"/>
+    <!-- <Pager :info="$page.allBlogPost.pageInfo"/> -->
   </Layout>
 </template>
 
@@ -29,7 +29,7 @@ export default {
 
 <page-query>
 query Blog ($page: Int) {
-  allBlogPost (perPage: 10, page: $page) @paginate {
+  allBlogPost (perPage: 5, page: $page) @paginate {
     pageInfo {
       totalPages
       currentPage
