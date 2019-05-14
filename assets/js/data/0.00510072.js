@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{209:function(e){e.exports={data:{allBlogPost:{pageInfo:{totalPages:2,currentPage:2},edges:[{node:{id:"c03e1eb8e96ea6f02604b40e1761d461",title:"Third post",slug:"/demo3",description:"",date:"May 5, 2019"}}]}}}}}]);
