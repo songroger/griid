@@ -1,0 +1,18 @@
+pre {
+  margin-bottom: 1.6rem;
+  padding: .8rem;
+  /*box-shadow: inset 0 0 0 1px var(--color-border);*/
+  box-shadow: 3px 3px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);
+  -moz-box-shadow: 3px 3px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+  line-height: 1.5;
+  overflow-x: auto;
+  vertical-align: top;
+  background-color: rgba(243, 178, 6, 0.02);
+}
+code {
+  /*background: #f7f7f7;*/
+  font-family: 'Source Code Pro',monospace;
+  font-size: .68rem;
+}
