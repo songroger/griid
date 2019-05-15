@@ -40,6 +40,14 @@ time {
   text-transform: uppercase;
 }
 
+blockquote {
+  padding: 1.0rem;
+  border-left: 4px solid #e6e6e6;
+  background: #f7f7f7;
+  p {
+    margin: 0 !important;
+  }
+}
 
 .layout {
   max-width: 760px;
