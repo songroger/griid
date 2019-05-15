@@ -26,6 +26,5 @@ export default {
 </script>
 
 <style lang="scss">
-    @import '../styles/common.scss';
-    @import '../styles/_syntax-highlighting.scss';
+    @import '../styles/main.scss';
 </style>

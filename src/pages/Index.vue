@@ -61,6 +61,9 @@ query Blog ($page: Int) {
 <style lang="scss">
   .article {
     margin-bottom: 0.1rem;
+    animation: itemshow 0.9s linear;
+    -webkit-animation: itemshow 0.9s linear;
+    -moz-animation: itemshow 0.9s linear;
     border-bottom: 1px solid rgba(0,0,0,.04);
     padding: 20px 0 20px;
   }
