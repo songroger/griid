@@ -120,9 +120,14 @@ query Blog ($page: Int) {
         width: 48%;
         -ms-flex-preferred-size: 48%;
         flex-basis: 48%;
-        padding-left: 40px;
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
+        padding: 10px 40px;
+        &:hover {
+            background-color: rgba(243, 236, 93, 0.15);
+            transition:background-color 0.5s ease-in;
+            -webkit-transition:background-color 0.5s ease-in;
+        }
     }
 }
 
