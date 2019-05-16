@@ -48,8 +48,8 @@ query Blog ($page: Int) {
 .arch-item {
   margin-bottom: 10px;
   animation: itemshow 0.9s linear;
-    -webkit-animation: itemshow 0.9s linear;
-    -moz-animation: itemshow 0.9s linear;
+  -webkit-animation: itemshow 0.9s linear;
+  -moz-animation: itemshow 0.9s linear;
   li {
     list-style-type: lower-greek;
   }
