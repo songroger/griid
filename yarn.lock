@@ -4429,7 +4429,7 @@ gray-matter@^4.0.2:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
-gridsome@^0.7.0:
+gridsome@^0.7.10:
   version "0.7.13"
   resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.7.13.tgz#7b711b34f9abbdb645948048773ce80381d78b6e"
   integrity sha512-EQMJfoLZpRRWR7gNB9ahkSTIn/QjanvyRJOS853NhhWhfHCgvQOO+DYu7EHvXF0afny43WOSiXOk0WYnolYGUg==
