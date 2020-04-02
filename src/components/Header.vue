@@ -1,7 +1,7 @@
 <template>
     <header class="header">
       <strong>
-        <g-link to="/">{{ $static.metaData.siteName }}</g-link>
+        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
       </strong>
       <nav class="nav">
         <g-link class="nav__link" to="/archive">Archive</g-link>
