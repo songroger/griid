@@ -18,5 +18,13 @@ module.exports = {
         route: '/:slug'
       }
     }
-  ]
+  ],
+  templates: {
+    BlogPost: [
+      {
+        path: '/:slug',
+        component: './src/templates/BlogPost.vue'
+      }
+    ]
+  }
 }
