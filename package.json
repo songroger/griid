@@ -15,7 +15,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "kind-of": "6.0.3",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "graphql-playground-html": "1.6.22",
     "sass-loader": "^7.1.0"
   }
