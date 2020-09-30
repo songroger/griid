@@ -19,6 +19,7 @@
     "graphql-playground-html": "1.6.22",
     "sass-loader": "^7.1.0",
     "bl": "^4.0.3",
-    "yargs-parser": ">=13.1.2"
+    "yargs-parser": ">=13.1.2",
+    "serialize-javascript": "^3.1.0"
   }
 }
