@@ -23,6 +23,12 @@
         <a href="/archive">more</a>
     </span>
     <!-- <Pager :info="$page.allBlogPost.pageInfo"/> -->
+    <div id="kiana-id" class="kiana">
+    <div class="kianaImgDiv">
+        <img id="kianaImg" src="/bulbasaur.png">
+    </div>
+</div>
+<div id="maskLayer"></div>
   </Layout>
 </template>
 
@@ -32,6 +38,93 @@ import { Pager } from 'gridsome'
 export default {
   components: {
     Pager
+  },
+  mounted() {
+    // var scripts = [
+    //   "bulbasaur.js"
+    // ];
+    // scripts.forEach(script => {
+    //   let tag = document.createElement("script");
+    //   tag.setAttribute("src", script);
+    //   document.head.appendChild(tag);
+    // });
+
+    var object = document.getElementById('kiana-id'),
+        maskLayer = document.getElementById('maskLayer'),
+        kianaImg = document.getElementById('kianaImg'),
+        initX, initY, firstX, firstY;
+
+    object.addEventListener('mousedown', function(e) {
+        e.preventDefault();
+        initX = this.offsetLeft;
+        initY = this.offsetTop;
+        firstX = e.pageX;
+        firstY = e.pageY;
+
+        kianaImg.src = "/bulbasaur.gif"
+        maskLayer.style.display = 'block';
+        maskLayer.addEventListener('mousemove', throttleDrag, false);
+    }, false);
+
+    document.addEventListener('mouseup', function() {
+        kianaImg.src = "/bulbasaur.png"
+        maskLayer.style.display = 'none';
+        maskLayer.removeEventListener('mousemove', throttleDrag);
+    }, false);
+
+    object.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        initX = this.offsetLeft;
+        initY = this.offsetTop;
+        var touch = e.touches;
+        firstX = touch[0].pageX;
+        firstY = touch[0].pageY;
+
+        kianaImg.src = "/bulbasaur.gif"
+        object.addEventListener('touchmove', swipeIt, false);
+    }, false);
+
+    document.addEventListener('touchend', function() {
+        kianaImg.src = "/bulbasaur.png"
+        object.removeEventListener('touchmove', swipeIt);
+    }, false);
+
+    function dragIt(e) {
+        object.style.left = initX + e.pageX - firstX + 'px';
+        object.style.top = initY + e.pageY - firstY + 'px';
+    }
+
+    function swipeIt(e) {
+        var contact = e.touches;
+        object.style.left = initX + contact[0].pageX - firstX + 'px';
+        object.style.top = initY + contact[0].pageY - firstY + 'px';
+    }
+
+    function throttleV2(fn, delay, mustRunDelay) {
+        var timer = null;
+        var t_start;
+        return function() {
+            var context = this,
+                args = arguments,
+                t_curr = +new Date();
+            clearTimeout(timer);
+            if (!t_start) {
+                t_start = t_curr;
+            }
+            if (t_curr - t_start >= mustRunDelay) {
+                fn.apply(context, args);
+                t_start = t_curr;
+            } else {
+                timer = setTimeout(function() {
+                    fn.apply(context, args);
+                }, delay);
+            }
+        };
+    }
+
+    function throttleDrag(e) {
+        throttleV2(dragIt(e), 50, 30)
+    }
   }
 }
 </script>
@@ -202,5 +295,30 @@ query Blog ($page: Int) {
       color: var(--color-text);
       text-decoration: none;
     }
+}
+
+.kiana {
+    z-index: 3;
+    position: absolute;
+    cursor: -webkit-grab;
+    cursor: grab;
+    top: 767px;
+    left: 200px;
+
+    img {
+        width: 60px;
+        height: 60px;
+    }
+
+}
+
+#maskLayer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    width: 100vw;
+    height: 1000vh;
+    display: none;
 }
 </style>
