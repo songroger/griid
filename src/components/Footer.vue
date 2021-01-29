@@ -1,7 +1,7 @@
 <template>
 <footer class="footer">
     <div class="col">
-        © 2019 {{ $static.metadata.siteName }} </a>
+        © 2019-2021 {{ $static.metadata.siteName }} </a>
     </div>
 </footer>
 </template>
