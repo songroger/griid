@@ -10,3 +10,9 @@
 2. `yarn` to install the packages
 3. `gridsome develop` to start a local dev server at `http://localhost:8080`
 4. Happy coding 🎉🙌
+
+
+### 3. Use docker to run the project
+
+1. `docker build -t griid .` or `docker pull songroger/griid`
+2. `docker run -p 8888:8080 --name myg songroger/griid`
